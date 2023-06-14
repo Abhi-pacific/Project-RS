@@ -45,3 +45,14 @@ def socket_accept():
     send_commands(connection)
 
     connection.close()
+
+# send commands to the friends or client
+def send_commands(connection):
+    while True:
+        cmd = input()
+        if cmd == 'quit':
+            connection.close()
+            s.close()
+            # closing the command promp
+            sys.exit() 
+        if 
