@@ -55,4 +55,19 @@ def send_commands(connection):
             s.close()
             # closing the command promp
             sys.exit() 
-        if 
+        # when we send data from one computer to other it will be send in bytes not in string
+        # converting the code in bytes 
+        if len(str.encode(cmd)) > 0:
+            # Here send is a function
+            connection.send(str.encode(cmd))
+            # Here 1024 is a size of chucks and utf-8 refers to the coding type
+            client_responce = str(connection.recv(1024),'utf-8')
+            print(client_responce, end = "")
+
+
+def main():
+    create_socket()
+    bind_socket()
+    socket_accept()
+
+main()
