@@ -6,7 +6,6 @@ function for creating a socket
 socket is used to connect 2 computers
 """
 
-
 def create_socket():
     try:
         global host
