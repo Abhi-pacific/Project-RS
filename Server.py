@@ -21,12 +21,8 @@ def create_socket():
 # Binding the socket and waiting for responce
 def bind_socket():
     try:
-        global host
-        global port
-        global s
-
-        print('Binding the por' + str(port))
-        s.bind((host, port))
+        print('Binding the port ' + str(port))
+        s.bind((host,port))
         # here 5 means it will tolerate the 5 errors after that it will give error
         s.listen(5)
     except socket.error as msg:
