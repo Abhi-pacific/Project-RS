@@ -5,7 +5,7 @@ import subprocess  # sub process are the processes that exist on windows system
 os and subprocess file is used execute the instruction which client.pt will recevice
 '''
 s = socket.socket()
-host =  '172.20.10.10'
+host =  'localhost'
 port = 9999
 
 # Binding the host and port

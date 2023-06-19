@@ -23,7 +23,7 @@ def bind_socket():
     try:
         print('Binding the port ' + str(port))
         s.bind((host,port))
-        # here 5 means it will tolerate the 5 errors after that it will give error
+        # here 5 means it will create upto 5 connections
         s.listen(5)
     except socket.error as msg:
         print("Socket binding error" + str(msg) + '\n' + 'Retrying..')
